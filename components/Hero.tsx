@@ -1,0 +1,52 @@
+import { Brain, ArrowRight, CheckCircle } from "lucide-react";
+
+export default function Hero() {
+  return (
+    <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 pt-20 pb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-4xl mx-auto">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <Brain className="w-4 h-4 mr-2" />
+            Powered by Gemini 2.0 Flash AI
+          </div>
+
+          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Generate Ultra-Personalized
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent block">
+              Cold Outreach in Seconds
+            </span>
+          </h1>
+
+          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Stop sending generic messages that get ignored. PingGenius uses advanced AI to craft
+            personalized DMs and emails that actually get responses—perfect for founders,
+            indie hackers, and sales teams who need results fast.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:shadow-xl hover:scale-105 flex items-center">
+              Generate Your First Message
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="text-blue-600 hover:text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border-2 border-blue-200 hover:border-blue-300">
+              Watch Demo
+            </button>
+          </div>
+
+          <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
+            {[
+              "No credit card required",
+              "Start in 30 seconds",
+              "500+ messages free",
+            ].map((text, idx) => (
+              <div key={idx} className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                {text}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
