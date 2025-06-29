@@ -1,8 +1,7 @@
-import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
+import HeroSection from "@/components/Hero";
+import FeaturesSection from "@/components/FeatureSection";
 import UseCasesSection from "@/components/UseCasesSection";
 import FinalCTA from "@/components/FinalCTA";
-import Footer from "@/components/Footer";
 import SocialProof from "@/components/SocialProof";
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
       <UseCasesSection />
       <SocialProof />
       <FinalCTA />
-      <Footer />
     </>
   );
 }
