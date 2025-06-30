@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <Brain className="w-4 h-4 mr-2" />
-            Powered by Gemini 2.0 Flash AI
+            Powered by advanced AI to craft replies that get responses.
           </div>
 
           <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -18,9 +18,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Stop sending generic messages that get ignored. PingGenius uses advanced AI to craft
-            personalized DMs and emails that actually get responses—perfect for founders,
-            indie hackers, and sales teams who need results fast.
+            Generic messages don’t work. PingGenius uses AI to craft personalized outreach that actually gets replies — perfect for indie hackers, startup founders, and solo teams.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -37,7 +35,7 @@ export default function Hero() {
             {[
               "No credit card required",
               "Start in 30 seconds",
-              "500+ messages free",
+              "20+ messages free",
             ].map((text, idx) => (
               <div key={idx} className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
