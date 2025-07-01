@@ -36,7 +36,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-3">
             {/* <ModeToggle /> */}
             <Link href="/sign-in">
-              <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-5 py-1.5 rounded-md font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+              <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
                 Join Waitlist
               </Button>
             </Link>
