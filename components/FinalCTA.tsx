@@ -8,7 +8,7 @@ export default function FinalCTA() {
           Ready to 3x Your Response Rates?
         </h2>
         <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-          Join 2,500+ founders and sales professionals who are already using PingGenius to generate
+          Join 1000+ founders and sales professionals who are already using PingGenius to generate
           personalized outreach that actually converts.
         </p>
 

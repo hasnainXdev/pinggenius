@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./dark-mode-toggle";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,14 +17,12 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-300 ${
-        scrolled ? "bg-white/30 dark:bg-white/70 shadow-sm" : "bg-white/90 dark:bg-[#0d0d0d]/70"
-      }`}
+      className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-white/30 dark:bg-white/70 shadow-sm" : "bg-white/90 dark:bg-[#0d0d0d]/70"
+        }`}
     >
       <div
-        className={`mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
-          scrolled ? "max-w-5xl" : "max-w-7xl"
-        }`}
+        className={`mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ${scrolled ? "max-w-5xl" : "max-w-7xl"
+          }`}
       >
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
@@ -36,9 +35,11 @@ export default function Navbar() {
           </div>
           <div className="flex items-center space-x-3">
             {/* <ModeToggle /> */}
-            <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
-              Join Waitlist
-            </Button>
+            <Link href="/sign-in">
+              <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-5 py-1.5 rounded-md font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+                Join Waitlist
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
