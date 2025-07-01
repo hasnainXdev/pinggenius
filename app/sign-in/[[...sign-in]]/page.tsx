@@ -2,5 +2,9 @@ import { SignIn } from '@clerk/nextjs'
 
 
 export default function Page() {
-    return <SignIn afterSignInUrl={"/waitlist"} />
+    return (
+    <div className='flex justify-center items-center h-screen'>
+    <SignIn afterSignInUrl={"/waitlist"} />
+    </div>
+    )
 }

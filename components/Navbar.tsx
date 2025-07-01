@@ -29,9 +29,11 @@ export default function Navbar() {
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-700">
-              PingGenius
-            </span>
+            <Link href="/">
+              <span className="text-xl font-bold text-gray-700">
+                PingGenius
+              </span>
+            </Link>
           </div>
           <div className="flex items-center space-x-3">
             {/* <ModeToggle /> */}
