@@ -18,7 +18,7 @@ export default function FeaturesSection() {
           <FeatureCard
             icon={<Brain className="w-7 h-7 text-white" />}
             title="AI-Powered Personalization"
-            description="Our Gemini 2.0 Flash integration analyzes prospects' LinkedIn profiles, recent posts, and company data to craft messages that feel genuinely personal—not templated."
+            description="Our AI Agents analyzes prospects LinkedIn profiles, recent posts, and company data to craft messages that feel genuinely personal—not templated."
             points={[
               "Analyzes 50+ data points per prospect",
               "Adapts tone based on industry",

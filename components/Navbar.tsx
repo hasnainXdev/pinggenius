@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav
       className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-300 ${
-        scrolled ? "bg-black/70 dark:bg-black/30 shadow-sm" : "bg-black/90 dark:bg-[#0d0d0d]/70"
+        scrolled ? "bg-white/30 dark:bg-white/70 shadow-sm" : "bg-white/90 dark:bg-[#0d0d0d]/70"
       }`}
     >
       <div
@@ -30,12 +30,12 @@ export default function Navbar() {
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:text-white">
+            <span className="text-xl font-bold text-gray-700">
               PingGenius
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
               Join Waitlist
             </Button>

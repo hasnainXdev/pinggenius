@@ -22,7 +22,7 @@ export default function FinalCTA() {
         <div className="flex items-center justify-center space-x-8 text-sm text-blue-200">
           <div className="flex items-center">
             <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-            500 messages free
+            20+ messages free
           </div>
           <div className="flex items-center">
             <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
