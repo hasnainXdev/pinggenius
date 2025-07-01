@@ -18,7 +18,7 @@ export default function UseCaseCard({
   result,
 }: UseCaseCardProps) {
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+    <div className="bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
       <div className="flex items-center mb-6">
         <div className={`w-12 h-12 ${color} rounded-lg flex items-center justify-center mr-4`}>
           {icon}
@@ -28,7 +28,7 @@ export default function UseCaseCard({
           <p className="text-gray-600 text-sm">{subtitle}</p>
         </div>
       </div>
-      <div className="bg-gray-50 p-4 rounded-lg border-l-4" style={{ borderColor: color.split(' ')[1] }}>
+      <div className="bg-gray-50 p-4 rounded-md border-l-4" style={{ borderColor: color.split(' ')[1] }}>
         <p className="text-sm text-gray-700 italic">"{message}"</p>
       </div>
       <div className="mt-4 flex items-center text-sm text-green-600">
