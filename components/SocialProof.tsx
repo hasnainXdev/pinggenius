@@ -11,17 +11,17 @@ export default function SocialProof() {
             ))}
           </div>
           <p className="text-lg text-gray-600">
-            "PingGenius transformed our outreach. We went from 18% to 52% response rates in our first month."
+            PingGenius transformed our outreach. We went from 18% to 40% response rates in our first month.
           </p>
           <p className="text-sm text-gray-500 mt-2">
             — Sarah Chen, Founder of TechFlow (YC S23)
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-          <Stat label="Active Users" value="2,500+" />
-          <Stat label="Messages Sent" value="150K+" />
-          <Stat label="Avg Response Rate" value="47%" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <Stat label="Active Users" value="100+" />
+          <Stat label="Messages Sent" value="1K+" />
+          <Stat label="Avg Response Rate" value="40%" />
           <Stat label="User Rating" value="4.9/5" />
         </div>
       </div>
@@ -32,7 +32,7 @@ export default function SocialProof() {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="text-center">
-      <div className="text-2xl font-bold text-gray-400">{value}</div>
+      <div className="text-2xl font-bold text-gray-500">{value}</div>
       <div className="text-sm text-gray-500">{label}</div>
     </div>
   );

@@ -23,7 +23,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:shadow-xl hover:scale-105 flex items-center cursor-pointer">
-              Generate Your First Message
+             Join Waitlist
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             {/* <button className="text-blue-600 hover:text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 border-2 border-blue-200 hover:border-blue-300">
