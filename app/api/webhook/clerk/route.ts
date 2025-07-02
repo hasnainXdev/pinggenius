@@ -6,66 +6,56 @@ import WaitlistsUserModel from "@/models/WaitlistsUser";
 
 export async function POST(req: Request) {
     try {
-        // ✅ 1. Check Authorization using Clerk's webhook secret
-        const headersList = await headers();
-        const authHeader = headersList.get("Authorization");
+        // ✅ 1. Verify the request using Clerk webhook secret
+        const headerList = await headers()
+        const authHeader = headerList.get("Authorization")
         if (authHeader !== `Bearer ${process.env.CLERK_WEBHOOK_SECRET}`) {
             return new NextResponse("❌ Unauthorized", { status: 401 });
         }
 
-        // ✅ 2. Parse the incoming event from Clerk
+        // ✅ 2. Parse the event
         const event: WebhookEvent = await req.json();
 
-        // ✅ 3. Connect to MongoDB
+        // ✅ 3. Connect to DB
         await connectDB();
 
         const { id, username } = event.data as any;
+        const email = (event.data as any)?.email_addresses?.[0]?.email_address;
 
-
-        switch (event.type) {
-            case "user.created": {
-                const email = (event.data as any)?.email_addresses?.[0]?.email_address;
-
-                // ✅ Narrow down the type here safely
-
-                if (!email) {
-                    console.warn("No email provided.");
-                    break;
-                }
-
-
-                const exists = await WaitlistsUserModel.findOne({ clerkId: id });
-                if (!exists) {
-                    await WaitlistsUserModel.create({
-                        username: username,
-                        email,
-                        clerkId: id,
-                        role: "user",
-                    });
-                    console.log("✅ User created:", email);
-                }
-                break;
+        // ✅ 4. Handle only user.created for MVP
+        if (event.type === "user.created") {
+            if (!email) {
+                console.warn("⚠️ No email found for new user.");
+                return NextResponse.json({ status: "skipped" }, { status: 200 });
             }
 
-            case "user.updated": {
-                await WaitlistsUserModel.findOneAndUpdate(
-                    { clerkId: id },
-                    { email, username },
-                    { new: true }
-                );
-                console.log("🔄 User updated:", id);
-                break;
+            const exists = await WaitlistsUserModel.findOne({ clerkId: id });
+            if (!exists) {
+                await WaitlistsUserModel.create({
+                    username: username || `user-${id.slice(-6)}`,
+                    email,
+                    clerkId: id,
+                    role: "user",
+                });
+                console.log("✅ New user saved:", email);
             }
-
-            case "user.deleted": {
-                await WaitlistsUserModel.findOneAndDelete({ clerkId: id });
-                console.log("🗑️ User deleted:", id);
-                break;
-            }
-
-            default:
-                console.log("ℹ️ Unhandled event type:", event.type);
         }
+
+        // Future logic:
+        /*
+        else if (event.type === "user.updated") {
+          const email = event.data?.email_addresses?.[0]?.email_address;
+          await WaitlistsUserModel.findOneAndUpdate(
+            { clerkId: id },
+            { email, username },
+            { new: true }
+          );
+          console.log("🔄 User updated:", id);
+        } else if (event.type === "user.deleted") {
+          await WaitlistsUserModel.findOneAndDelete({ clerkId: id });
+          console.log("🗑️ User deleted:", id);
+        }
+        */
 
         return NextResponse.json({ status: "ok" }, { status: 200 });
     } catch (err) {
