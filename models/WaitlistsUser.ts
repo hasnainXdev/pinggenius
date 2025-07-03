@@ -5,6 +5,7 @@ const WaitlistsUser = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     clerkId: { type: String, required: true, unique: true },
     role: { type: String, required: true, enum: ['user', 'admin'], default: 'user' },
+    isWaitlisted: { type: Boolean, default: false },
 
 }, { timestamps: true }
 )

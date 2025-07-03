@@ -35,27 +35,27 @@ export async function POST(req: Request) {
                     username: username || `user-${id.slice(-6)}`,
                     email,
                     clerkId: id,
+                    isWaitlisted: true,
                     role: "user",
                 });
-                console.log("✅ New user saved:", email);
             }
         }
 
         // Future logic:
-        /*
+
         else if (event.type === "user.updated") {
-          const email = event.data?.email_addresses?.[0]?.email_address;
-          await WaitlistsUserModel.findOneAndUpdate(
-            { clerkId: id },
-            { email, username },
-            { new: true }
-          );
-          console.log("🔄 User updated:", id);
+            const email = event.data?.email_addresses?.[0]?.email_address;
+            await WaitlistsUserModel.findOneAndUpdate(
+                { clerkId: id },
+                { email, username },
+                { new: true }
+            );
+            console.log("🔄 User updated:", id);
         } else if (event.type === "user.deleted") {
-          await WaitlistsUserModel.findOneAndDelete({ clerkId: id });
-          console.log("🗑️ User deleted:", id);
+            await WaitlistsUserModel.findOneAndDelete({ clerkId: id });
+            console.log("🗑️ User deleted:", id);
         }
-        */
+
 
         return NextResponse.json({ status: "ok" }, { status: 200 });
     } catch (err) {
