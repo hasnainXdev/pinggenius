@@ -41,7 +41,7 @@ export default function Navbar() {
             {/* Optional Mode Toggle */}
             {/* <ModeToggle /> */}
 
-            {isSignedIn ? (
+            {/* {isSignedIn ? (
               <>
                 <Link href="/waitlist">
                   <Button
@@ -50,25 +50,30 @@ export default function Navbar() {
                   >
                     ✅ Already Waitlisted
                   </Button>
-                </Link>
+                </Link> */}
 
-                {/* Clerk User Avatar Dropdown */}
-                <UserButton
+            {/* Clerk User Avatar Dropdown */}
+            {/* <UserButton
                   afterSignOutUrl="/"
                   appearance={{
                     elements: {
                       avatarBox: "w-9 h-9 ring-2 ring-blue-500",
                     },
                   }}
-                />
-              </>
+                /> */}
+            {/* </>
             ) : (
               <Link href="/sign-in">
                 <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
                   Join Waitlist
                 </Button>
-              </Link>
-            )}
+              </Link> */}
+            {/* )} */}
+            <Link href="/waitlist-signin">
+              <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+                Join Waitlist
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -12,11 +12,8 @@ const Waitlist = () => {
           🎉 You're on the Waitlist!
         </h1>
         <p className="text-gray-600 dark:text-gray-300 text-lg">
-          {
-            isSignedIn
-              ? `Thanks ${user?.fullName}! We'll notify you when PingGenius launches.`
-              : "You've successfully joined the waitlist. Stay tuned!"
-          }
+          We'll notify you when PingGenius launches.
+          You've successfully joined the waitlist. Stay tuned!
         </p>
         <p className="mt-4 text-sm text-gray-700 dark:text-gray-300">
           We appreciate your early support 🙌

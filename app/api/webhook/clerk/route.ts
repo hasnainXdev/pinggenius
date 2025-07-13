@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import connectDB from "@/database/db";
-import WaitlistsUserModel from "@/models/WaitlistsUser";
+import WaitlistsUser from "@/models/WaitlistsUser";
 
 export async function POST(req: Request) {
     try {
@@ -29,9 +29,9 @@ export async function POST(req: Request) {
                 return NextResponse.json({ status: "skipped" }, { status: 200 });
             }
 
-            const exists = await WaitlistsUserModel.findOne({ clerkId: id });
+            const exists = await WaitlistsUser.findOne({ clerkId: id });
             if (!exists) {
-                await WaitlistsUserModel.create({
+                await WaitlistsUser.create({
                     username: username || `user-${id.slice(-6)}`,
                     email,
                     clerkId: id,
@@ -45,14 +45,14 @@ export async function POST(req: Request) {
 
         else if (event.type === "user.updated") {
             const email = event.data?.email_addresses?.[0]?.email_address;
-            await WaitlistsUserModel.findOneAndUpdate(
+            await WaitlistsUser.findOneAndUpdate(
                 { clerkId: id },
                 { email, username },
                 { new: true }
             );
             console.log("🔄 User updated:", id);
         } else if (event.type === "user.deleted") {
-            await WaitlistsUserModel.findOneAndDelete({ clerkId: id });
+            await WaitlistsUser.findOneAndDelete({ clerkId: id });
             console.log("🗑️ User deleted:", id);
         }
 
