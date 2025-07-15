@@ -10,7 +10,7 @@ export default function FeaturesSection() {
             Why Founders Choose PingGenius
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Built specifically for busy entrepreneurs who need high-converting outreach without the time investment
+            Built specifically for busy entrepreneurs who need high converting outreach without the time investment
           </p>
         </div>
 
@@ -18,7 +18,7 @@ export default function FeaturesSection() {
           <FeatureCard
             icon={<Brain className="w-7 h-7 text-white" />}
             title="AI-Powered Personalization"
-            description="Our AI Agents analyzes prospects LinkedIn profiles, recent posts, and company data to craft messages that feel genuinely personal—not templated."
+            description="Our AI Agents analyzes prospects LinkedIn profiles, recent posts, and company data to craft messages that feel genuinely personal not templated."
             points={[
               "Analyzes 50+ data points per prospect",
               "Adapts tone based on industry",
