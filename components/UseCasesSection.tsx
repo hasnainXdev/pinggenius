@@ -10,7 +10,7 @@ export default function UseCasesSection() {
             Perfect For Every Outreach Scenario
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Whether you're raising funding, finding customers, or building partnerships—PingGenius adapts to your needs
+            Whether you're raising funding, finding customers, or building partnerships PingGenius adapts to your needs
           </p>
         </div>
 
