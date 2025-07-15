@@ -3,13 +3,10 @@
 import { useEffect, useState } from "react";
 import { Zap } from "lucide-react";
 import { Button } from "./ui/button";
-import { ModeToggle } from "./dark-mode-toggle";
 import Link from "next/link";
-import { UserButton, useUser } from "@clerk/nextjs";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const { isSignedIn } = useUser();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -39,36 +36,6 @@ export default function Navbar() {
           </div>
           <div className="flex items-center space-x-3">
             {/* Optional Mode Toggle */}
-            {/* <ModeToggle /> */}
-
-            {/* {isSignedIn ? (
-              <>
-                <Link href="/waitlist">
-                  <Button
-                    variant="secondary"
-                    className="cursor-pointer bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-200 rounded-md font-base transition-all duration-200 hover:shadow hover:scale-105"
-                  >
-                    ✅ Already Waitlisted
-                  </Button>
-                </Link> */}
-
-            {/* Clerk User Avatar Dropdown */}
-            {/* <UserButton
-                  afterSignOutUrl="/"
-                  appearance={{
-                    elements: {
-                      avatarBox: "w-9 h-9 ring-2 ring-blue-500",
-                    },
-                  }}
-                /> */}
-            {/* </>
-            ) : (
-              <Link href="/sign-in">
-                <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
-                  Join Waitlist
-                </Button>
-              </Link> */}
-            {/* )} */}
             <Link href="/waitlist-signin">
               <Button className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
                 Join Waitlist
