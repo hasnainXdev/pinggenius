@@ -38,7 +38,7 @@ export default function UseCasesSection() {
             color="bg-gradient-to-br from-blue-500 to-blue-700"
             title="Sales Teams"
             subtitle="B2B Prospecting"
-            message={`Hi [Name], I noticed [Company] just expanded to [Location] and is likely scaling your [Department] team. Companies similar to yours typically see 30% cost savings with our [Solution]. Worth a quick 10-minute conversation?`}
+            message={`Hi Sarah, I noticed [Company] just expanded to [Location] and is likely scaling your [Department] team. Companies similar to yours typically see 30% cost savings with our Solution. Worth a quick 10-minute conversation?`}
             result={<><TrendingUp className="w-4 h-4 mr-1" /> 45% response rate for B2B sales</>}
           />
         </div>
