@@ -1,4 +1,5 @@
 import { Zap } from "lucide-react";
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -12,9 +13,9 @@ export default function Footer() {
             <span className="text-xl font-bold text-white">PingGenius</span>
           </div>
           <div className="flex space-x-8 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-            <a href="#" className="hover:text-white transition-colors">Support</a>
+            <Link href="/" className="hover:text-white transition-colors">Privacy</Link>
+            <Link href="/" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/" className="hover:text-white transition-colors">Support</Link>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
