@@ -14,7 +14,7 @@ export default function SocialProof() {
             PingGenius transformed our outreach. We went from 18% to 40% response rates in our first month.
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            — Sarah Chen, Founder of TechFlow (YC S23)
+            Sarah Chen, Founder of TechFlow (YC S23)
           </p>
         </div>
 
