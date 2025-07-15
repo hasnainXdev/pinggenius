@@ -23,7 +23,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Generic messages don’t work. PingGenius uses AI to craft personalized outreach that actually gets replies — perfect for indie hackers, startup founders, and solo teams.
+            Generic messages don’t work. PingGenius uses AI to craft personalized outreach that actually gets replies perfect for indie hackers, startup founders, and solo teams.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
