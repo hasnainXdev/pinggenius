@@ -13,9 +13,9 @@ export default function FinalCTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <Link href="/sign-in">
+          <Link href="/waitlist-signin">
             <button className="cursor-pointer bg-white hover:bg-gray-100 text-blue-800 px-8 py-4 rounded-md font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-xl hover:scale-105 flex items-center">
-              Try PingGenius Free
+              Join PingGenius Now
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
           </Link>
